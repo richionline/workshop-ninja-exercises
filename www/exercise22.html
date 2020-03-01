@@ -1,0 +1,35 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+Vamos ahora a revisar el metodo que se ejecuta cuando damos de alta un Ninja, en este caso se ejecuta el método create.
+</p>
+<p>
+Si ves la primera línea del método lo que se hace es recoger todos los campos del formulario y guardarlos en la variable <b>ninja_data</b> en
+formato diccionario de Python (clave:valor):
+<pre>
+{'c1': 'v1', 'c2': 'v2', ...}
+</pre>
+<p>
+¿Serías capaz de mostrar su contenido en las trazas usando logging?. Aparte del mensaje en este caso tenemos que mostrar el contenido de una variable,
+se puede hacer de varias formas pero como pista indicarte que puedes usar signos para operar y como el contenido de la variable ninja_data es
+un diccionario lo tenemos que formatear con <b>format(ninja_data)</b> para que asi lo pase a string.
+</p>
+<p>
+Si pruebas y observas bien el log verás tu traza pero aparte también verás un <b>error</b>, intenta ver el motivo del error para ver qué pasa aunque tiene que ver con el siguiente ejercicio.
+</p>
+
+</div>
+
+<div id="solution">
+Dos posibles formas de hacerlo:
+<pre>
+logging.info('Mensaje: ' + format(ninja_data))
+
+logging.info('Mensaje: %s', ninja_data) -> Con %s indicamos que se muestra un string y lo coja del siguiente parametro (ninja_data),
+                                           no hace falta formatearlo como en ejemplo anterior ya que lo hace automáticamente
+
+</pre>
+
+</div>

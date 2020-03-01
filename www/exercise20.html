@@ -1,0 +1,31 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Consola Google Cloud (LOCAL)</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>Indexes</div>
+
+<p>
+Vamos ahora a acceder a la consola local Google cuya URL hemos obtenido en un ejercicio anterior. En ella vamos a validar 
+que los indices estan creados.
+</p>
+
+<p>
+Intenta localizar donde aparece. Importante validar que están todos los índices
+definidos en <b>index.yaml</b>. Recuerda que para acceder a la consola en local debes tener arrancada la aplicación en local y no es necesario
+parar y arrancar para que coja los cambios en <b>index.yaml</b>.
+</p>
+</div>
+
+<div id="solution">
+<p>
+Acceder a la url http://localhost:8000 y pulsar en el menú la opción Datastore Indexes, debería mostrarnos los indices creados que se corresponden
+con los incluidos en el fichero index.yaml:
+</p>
+<pre>
+Mooc
+    ninja_id ▲ date ▲
+Ninja
+    email ▲ date ▼
+    department ▲ date ▼
+    building ▲ date ▲
+</pre>
+
+</div>

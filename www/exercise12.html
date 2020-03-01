@@ -1,0 +1,27 @@
+<div id="content">
+<div><b>RESUMEN DEL BLOQUE</b></div>
+<p>
+<ul>
+    <li>Hemos configurado el nombre del servicio en el fichero <b>app.yaml</b></li>
+    <pre>service: uid</pre>
+    <li>Hemos ejecutado la aplicación en local</li>
+    <pre>dev_appserver.py .</pre>
+    <li>Hemos accedido a la consola Google Cloud en LOCAL para validar que tenemos un servicio (instancia) levantado con nuestro uid</li>
+    <li>Hemos revisado en el fichero <b>app.yaml</b> el elemento handlers, asi como el entorno de ejecución y versión de API para Python</li>
+<pre>
+runtime: python27
+api_version: 1</pre>
+    <li>En el fichero <b>./src/config.py</b> hemos revisado la línea en la cual hemos asignado el nombre 
+    del servicio (nuestra uid) a nuestra variable donde alamcenaremos el nombre del namespace a utilizar. Con este namespace 
+    lo que conseguimos es que sobre un mismo sistema de almacenamiento, en este caso datastore, cada usuario tenga su propio 
+    espacio definido donde se guardaran sus entidades sin interferir con las del resto.</li>
+    <pre>NAME_SPACE = modules.get_current_module_name()</pre>
+</ul>
+
+</p>
+
+</div>
+
+<div id="solution">
+<p>Animo!!!...No te despistes ni te relajes...mira con disimulo al compañero que está a tu lado pero sólo te digo que ya ha pasado por esta pregunta...</p>
+</div>

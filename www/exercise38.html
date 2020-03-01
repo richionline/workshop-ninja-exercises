@@ -1,0 +1,28 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Consola Google Cloud (NUBE)</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>Storage</div>
+
+<p>
+Lo que vamos a hacer ahora es ver donde se almacenan las imágenes que incorporamos en la app. Para ello accede a la
+aplicación en <b>local</b> y añade la imagen de algún ninja o sube algun fichero en algún mooc. Cuando lo hayas hecho revisa
+en logs que se ha subido correctamente el fichero a Google Cloud Storage.
+</p>
+<p>
+Una vez revisada la traza accede a la consola
+Google (https://console.cloud.google.com) y en el apartado Storage intenta localizar la imagen que hayas subido.
+Aunque ejecutemos en local la aplicación la librería que usamos no hace uso de Storage en local, si no que hace uso de Storage de nuestra nube Google.
+</p>
+</div>
+
+<div id="solution">
+<p>
+Debería salir una traza del tipo:
+</p>
+<pre>
+INFO  yyyy-mm-dd hh:mm:ss storage_handler.py:XX] WNP: Fichero XXXXXXXXX creado en GCS
+</pre>
+<p>
+Para ver el fichero en la consola accedemos a Storage / Browser en el menú lateral y nos apareceran todos los buckets creados en el taller, pulsamos el nuestro
+y dentro deberíamos ver los ficheros subidos. Podemos seleccionar uno y tratar de descargarlo desde la propia consola.
+</p>
+</div>

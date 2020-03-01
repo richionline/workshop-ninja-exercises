@@ -1,0 +1,21 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+service: default
+
+# [START handlers]
+handlers:
+- url: /$
+  static_files: www/index.html
+  upload: www/index.html
+  application_readable: True
+  secure: always
+  login: required
+
+- url: /(.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico))$
+  static_files: www/\1
+  upload: www/.*\.(html|js|css|svg|json|png|jpg|gif|map|woff|ttf|ico)
+  application_readable: True
+  secure: always
+  login: required
+# [END handlers]

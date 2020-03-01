@@ -1,0 +1,37 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+Vamos a buscar el metodo <b>list</b>, este se encarga de mostrar los Ninjas que aparecen en la pantalla de inicio.
+</p>
+<p>
+Si os fijáis existe un campo donde el usuario introduce un departamento y lo que hace es mostrar los Ninjas de ese
+determinado departamento. Actualmente eso no está funcionando ya que devuelve todos sin filtrar y
+lo que vamos a hacer es modificar el método para
+incluir el filtro por departamento.
+</p>
+<p>Como pista indicar que sólo debemos tocar una parte de la sentencia if y para
+filtrarlos debemos usar el método <b>query</b>. Si revisas el detalle de la query actual verás que está ordenando por el
+campo name, esto te puede dar una pista de como trabajar con otros campos.
+</p>
+<p>
+Éstos son algunos ejemplos de trabajar con entidades que te pueden ayudar a realizar el ejercicio.
+Revísalas e intenta deducir qué hacen:
+</p>
+<pre>
+    Ninja.query()
+    Ninja.query().fetch(10)
+    Ninja.query(Ninja.department == filter).order(-Ninja.date)
+    Ninja.get_by_id(int(ninja_ID))
+    Ninja.query().order(-Ninja.date).fetch(10)
+</pre>
+
+</div>
+
+<div id="solution">
+<pre>
+else:
+    ninjas = model.Ninja.query(model.Ninja.department == department).order(model.Ninja.name).fetch()
+</pre>
+</div>

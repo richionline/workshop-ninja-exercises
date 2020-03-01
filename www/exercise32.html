@@ -1,0 +1,37 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Terminal LOCAL y Consola Google Cloud (NUBE)</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>Despliegue</div>
+
+<p>
+Ahora que hemos finalizado un primer bloque y hemos validado que la app funciona correctamente en local vamos a realizar
+un despliegue en la nube. Para ello ejecutamos el siguiente comando desde el raíz de nuestro proyecto,
+en concreto donde se encuentra nuestro archivo <b>app.yaml</b>.
+</p>
+<pre>gcloud app deploy</pre>
+<p>
+Para actualizar los índices debemos ejecutar lo mismo pero indicando el fichero donde tenemos los índices definidos:
+</p>
+<pre>gcloud app deploy index.yaml</pre>
+
+<p>
+Para validar lo desplegado vamos a acceder a la consola Google en la nube (<a href="https://console.cloud.google.com" target="_blank">https://console.cloud.google.com</a>).
+
+Una vez accedas a la consola valida que tienes el proyecto seleccionado, lo puedes validar en la barra superior a la 
+derecha del título Google Cloud Platform. Si no lo tienes seleccionado pulsa en ella para buscarlo.
+
+<p>Revisa en los siguientes apartados que se ha producido la actualización:</p>
+<pre>
+AppEngine > Services
+AppEngine > Versions
+</pre>
+Valida igualmente que en el apartado Datastore los índices estan creados y se corresponden con los de <b>index.yaml</b>.
+<p>
+Accede a la app en la nube y prueba a dar de alta algunos ninjas, si te da error intenta ver el motivo.
+</p>
+</div>
+
+<div id="solution">
+  <p>
+  Si no los encuentras pide ayuda y te decimos donde... ;)
+  </p>
+</div>

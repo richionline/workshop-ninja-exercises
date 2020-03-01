@@ -1,0 +1,33 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>index.yaml</div>
+
+<p>
+Cada consulta a Data Store (NoSQL) necesita un índice correspondiente. Los índices para las consultas simples por una sola propiedad,
+se crean de manera automática al definir la entidad como has visto en el punto anterior.
+</p>
+<p>
+Los índices para las consultas por dos o más propiedades se deben definir en el archivo de configuración denominado <b>index.yaml</b>. 
+</p>
+<p>
+Revisa el fichero para ver los índices ya creados e intenta identificar a qué entidad pertenece cada uno.
+</p>
+
+<p>NOTA: Es importante definir índices en el modelo de las aplicaciones GAE, ya que Data Store no devolverá resultados en aquellas consultas en que se utilicen campos que no hayan sido indexados previamente, bien como índices simples o como índices compuestos
+</p>
+
+</div>
+
+<div id="solution">
+<pre>
+Indices entidad Ninja
+--> email ascendente y date descendente
+--> department ascendente y date descendente
+--> building y date ambos ascendentes
+
+Indices entidad Mooc
+--> ninja_id y date ambos ascendentes
+
+</pre>
+
+</div>

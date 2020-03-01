@@ -1,0 +1,21 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+Ahora pasamos al método <b>update</b>, que lo que hace es modificar los datos del ninja. Para ello como el método create usa
+también el método </b>save_ninja</b>.
+</p>
+<p>Como tarea debemos obtener el ninja a modificar y asignar a la variable <b>ninja</b>,
+esta variable será la que se use en el resto del método para actualizar sus datos a partir de lo que el usuario hubiera introducido en el formulario.
+</p>
+</div>
+
+<div id="solution">
+<p>
+  Sí, estas en lo cierto, es como en el ejercicio anterior...
+</p>
+<pre>
+ninja = model.Ninja.get_by_id(int(ninja_id))
+</pre>
+</div>

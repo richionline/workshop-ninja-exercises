@@ -1,0 +1,25 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/config.py</div>
+
+<p>
+Anteriormente hemos configurado el nombre del servicio (<b>service</b>) en el fichero <b>app.yaml</b>, lo que haremos a continuación es usar ese parámetro como nombre del <b>namespace</b> que cada uno va a usar.
+</p>
+<p>
+Con este namespace lo que conseguimos es que sobre un mismo sistema de almacenamiento, en este caso <b>datastore</b>, cada usuario tenga su
+propio espacio definido donde se guardaran sus entidades sin interferir con las del resto.</p>
+<p>Abre el fichero <b>config.py</b> y detecta la
+línea donde se recoje el nombre del servicio definido para asignarlo a la variable donde guardaremos el namespace a utilizar.
+</p>
+<p>
+NOTA: Aunque ahora se llamen servicios Google los denominaba inicialmente módulos, pero esta nomenclatura no ha cambiado en el código, que mantiene el nombre antiguo.
+</p>
+</div>
+
+<div id="solution">
+<pre>
+NAME_SPACE = modules.get_current_module_name()
+</pre>
+El método get_current_module_name lo que nos devuelve es el nombre del servicio definido en app.yaml. La <a href="https://cloud.google.com/appengine/docs/standard/python/using-the-modules-api?hl=es-419" target="_blank">API de Modules</a>
+proporciona funciones que muestran información acerca del entorno operativo (módulos o servicios, versiones e instancias)
+</div>

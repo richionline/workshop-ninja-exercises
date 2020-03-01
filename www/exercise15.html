@@ -1,0 +1,41 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>main.py</div>
+
+<p>
+El fichero <b>main.py</b> es el fichero Python principal de la aplicación, en él y mediante la clase <a href="https://webapp2.readthedocs.io/en/latest/guide/app.html"><b>WSGIApplication</b></a> definiremos la aplicación y
+mediante la clase <b>Route</b> estableceremos la definición de cada una de las rutas de nuestra app, indicando para cada ruta su path, el handler
+(clase), el metodo dentro de ese handler que se ejecutará así como el método HTTP permitido (GET, POST, PUT, etc.).
+</p>
+<p>
+Revisa los comandos import al inicio del fichero así como las rutas declaradas y localiza los ficheros Python involucrados así como las clases y metodos dentro de estos.
+</p>
+
+</div>
+
+<div id="solution">
+<pre>
+./src/ninjas.py
+    Clase: Ninjas
+    Métodos: list, create, retrieve, update, delete
+./src/moocs.py
+    Clase: Moocs
+    Métodos: list, create, retrieve, delete
+./src/ranking.py
+    Clase: Ranking
+    Métodos: ranking, points
+</pre>
+<p>
+Sobre las rutas y métodos HTTP empleados ten en cuenta que se ha definido un <a href="https://bbvaopen4u.com/es/actualidad/api-rest-que-es-y-cuales-son-sus-ventajas-en-el-desarrollo-de-proyectos" target="_blank">API REST</a>,
+la cual establece una convención acerca de la nomenclatura de las rutas y los métodos HTTP empleados, de manera que cada ruta y método definen una acción concreta sobre un recurso.
+</p>
+<p>En nuestro caso, sobre el recurso Ninja, nuestra API tiene las siguientes acciones:</p>
+<pre>
+    GET /ninjas: Devuelve el listado de ninjas existente
+    GET /ninjas/&lt;id&gt;: Devuelve la información del ninja cuyo identificador se indica, o un código HTTP 404 si no existe
+    POST /ninjas: Crea un nuevo ninja a partir de la información enviada en el cuerpo de la petición HTTP
+    PUT /ninjas/&lt;id&gt;: Modifica la información del ninja cuyo identificador se indica con la enviada en el cuerpo de la petición HTTP, o devuelve un código 404 si no existe
+    DELETE /ninjas/&lt;id&gt;: Elimina el ninja cuyo identificador se indica, o devuelve un código HTTP 404 si no existe
+</pre>
+<p>Cuando avancemos en el taller veremos un ejemplo de cómo invocar a algunos de estos servicios directamente desde el navegador</p>
+</div>

@@ -1,0 +1,41 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Terminal LOCAL</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>Clonado fuentes</div>
+
+<p>
+Vamos a bajarnos el código del repositorio para poder realizar las prácticas.
+Como repositorio hemos usado GitHub y lo que vamos a hacer es clonar el
+proyecto en nuestra máquina. Sitúate en la carpeta que decidas y ejecuta el siguiente comando:
+</p>
+<pre>
+git clone https://github.com/richionline/Workshop-Ninja-Python.git
+</pre>
+<p>
+Esto nos creará una carpeta con el nombre del proyecto y todos los ficheros dentro.
+Valida que se ejecuta correctamente el clonado y accede a la carpeta creada.
+</p>
+</div>
+
+<div id="solution">
+  <pre>
+  $ git clone https://github.com/richionline/Workshop-Ninja-Python.git
+  ...
+  Receiving objects: 100% (4743/4743), 17.54 MiB | 4.90 MiB/s, done.
+  Resolving deltas: 100% (897/897), done.
+  $ cd Workshop-Ninja-Python
+  </pre>
+
+  Sobre la estructura de proyecto destacamos los siguientes ficheros y carpetas:
+  <pre>
+  <b>./www</b> Carpeta que contiene todos los ficheros que componen el front de la aplicación
+  <b>./src</b> Carpeta que va a contener nuestros fuentes Python
+  <b>app.yaml</b> Archivo que nos va a permitir configurar nuestra aplicación. Por ejemplo indicar entorno ejecución, rutas URL, etc.
+  <b>index.yaml</b> Archivo donde vamos a definir los índices para las consultas complejas
+  <b>main.py</b> Archivo Python que va a ser el principal de la aplicación. En él definiremos la aplicación y rutas
+  <b>appengine_config.py</b> Archivo Python para poder personalizar los módulos de Python, con ello podemos anular (sobreescribir)
+                             constantes y funciones existentes.
+  <b>requirements.txt</b> Contiene las dependencias de paquetes que vamos a necesitar
+  <b>.gcloudignore</b> Especifica los archivos que no se van a desplegar en Google Cloud Platform
+  <b>.gitignore</b> Especifica los archivos que no se gestionan en repositorio Git
+</pre>
+</div>

@@ -1,0 +1,28 @@
+<div id="content">
+<div><b>RESUMEN DEL BLOQUE</b></div>
+<p>
+<ul>
+    <li>En el fichero <b>./src/config.py</b> hemos configurado la variable CLOUD_STORAGE_BUCKET para guardar en ella el nombre 
+    de nuestro segmento de Google Storage, que será donde guardemos los archivos usados por la aplicación. Recuerda que como nombre hemos 
+    hecho para que use el definido como nombre de servicio en <b>app.yaml</b></li>
+    <pre>CLOUD_STORAGE_BUCKET = modules.get_current_module_name()</pre>
+    <li>En el fichero <b>appengine_config.py</b> redefinido el método <b>namespace_manager_default_namespace_for_request()</b>
+    para que como nombre del namespace devuelva el definido en la varible <b>NAME_SPACE</b> de <b>./src/config.py</b></li>
+    <pre>
+def namespace_manager_default_namespace_for_request():
+return config.NAME_SPACE</pre>
+    <li>Hemos revisado el fichero <b>main.py</b> que es donde definimos la aplicación y donde establecemos cada una de las rutas/servicios 
+    de nuestra aplicación</li>
+    <li>Hemos comprobado que en el fichero <b>./src/model.py</b> se encuentran definidas las entidades de DataStore (Ninja y Mooc) que vamos 
+        a utilizar en nuestra aplicación. Para ello usamos la librería <b>NDB</b> que es la que permite que las aplicaciones Python
+        se conecten a DataStore (BD NoSQL) de manera sencilla</li>
+</ul>
+
+</p>
+
+</div>
+
+<div id="solution">
+<p>Animo!!!...No te despistes ni te relajes...mira con disimulo al compañero que está a tu lado pero sólo te digo que ya 
+    ha pasado por esta pregunta...</p>
+</div>

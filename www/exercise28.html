@@ -1,0 +1,27 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+El método <b>retrieve</b> lo que hace es a partir del ninja_id lo busca en el Data Store de cara a mostrar sus datos.
+</p>
+<p>
+Para buscar un determinado ID podemos usar el método <b>get_by_id(ID)</b>. Para ello tenemos que buscar sobre <b>model.Ninja</b>
+y el resultado devolverlo sobre un objeto llamado <b>ninja</b>. Intenta como primera línea de este método obtener los
+datos del ninja que nos llega como parámetro. La mejor forma de validarlo es probando en la aplicación a editar un ninja, no 
+hace falta grabar!!.
+</p>
+
+<p>
+NOTA: Ten en cuenta que el método <b>get_by_id</b> requiere un entero (los identificadores los ninjas son enteros, lo puedes comprobar en la consola local) y al ser <b>ninja_id</b> de tipo String debes transformarlo a
+un entero con la función <b>int(VARIABLE)</b>.
+</p>
+
+
+</div>
+
+<div id="solution">
+<pre>
+ninja = model.Ninja.get_by_id(int(ninja_id))
+</pre>
+</div>

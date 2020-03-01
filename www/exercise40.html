@@ -1,0 +1,35 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>main.py</div>
+
+<p>
+Si recordáis en un ejercicio anterior definimos en el fichero <b>main.py</b> todas las rutas de los servicios que exponemos. Ahora que ya tenemos datos
+cargados vamos a probar los servicios <b>GET</b> para validar que devuelve en formato <b>json</b> la información almacenada.
+<p>
+Por tanto, localiza los servicios <b>GET</b> definidos en <b>main.py</b> y valida que devuelve datos. Para probarlos toma la url
+de nuestra aplicación y añade las rutas definidas. Puedes probar en local o en la nube.
+</p>
+<p>
+Por ejemplo <b>http://localhost:8080/ninjas</b>
+</p>
+
+</div>
+
+<div id="solution">
+<p>
+Te pasamos las urls probando en local pero podrias sustituir localhost:8080 por la url de tu aplicación en la nube que debería ser
+del tipo <b>https://XXXXXXX-dot-dev-bbva-gae-cicd.appspot.com</b>. Como ves, cuando un servicio se despliega en la nube de Google
+se puede invocar directamente poniendo el nombre del servicio delante del nombre de la aplicación y separado por <b>-dot-</b>.
+Si no indicas el nombre del servicio, accedes al servicio por defecto, que como puedes ver, es esta página :)
+</p>
+</p>
+<pre>
+localhost:8080/ninjas
+localhost:8080/ninjas/&lt;id&gt; # Sustituye id por un identificador devuelto en la llamada anterior
+localhost:8080/moocs
+localhost:8080/moocs/&lt;id&gt;  # Sustituye id por un identificador devuelto en la llamada anterior
+localhost:8080/ranking
+localhost:8080/ranking/&lt;id_ninja&gt; # Sustituye id_ninja por un identificador devuelto en la primera llamada
+</pre>
+
+</div>

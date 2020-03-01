@@ -1,0 +1,29 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/moocs.py</div>
+
+<p>
+El método <b>delete</b> también es muy sencillo de implementar con lo que hemos visto.
+Este método lo que hace es borrar un determinado mooc que llega como parámetro.
+</p>
+<p>
+En esta tarea vamos a completar ese método con lo que falta, que en este caso sería localizar el mooc en <b>model.Moocs</b> y
+proceder a su borrado si lo encontramos. Una vez borrado añadir una traza de log indicando el ID del mooc eliminado,
+¿podrías en vez de el ID indicar el name de ese mooc en la traza?
+</p>
+</div>
+
+<div id="solution">
+<pre>
+mooc = model.Mooc.get_by_id(int(mooc_id))
+if mooc is None:
+    send(self, 404)
+else:
+    name = mooc.name # Cogemos el nombre del mooc antes de borrar para luego mostrarlo en la traza
+    mooc.key.delete()
+    # Dos maneras de mostrar mensajes
+    logging.info('WNP: Se procede a borrar el mooc: ' + format(mooc_id) + ' - ' + name)
+    logging.info('WNP: Se procede a borrar el mooc con id %s y nombre %s', format(mooc_id), name)
+    send(self, 204)
+</pre>
+</div>

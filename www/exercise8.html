@@ -1,0 +1,28 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Terminal LOCAL</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>Ejecutar aplicación</div>
+
+<p>
+Desde el terminal y habiendo ejecutado el entorno virtual en los ejercicios anteriores, levantamos la aplicación con el siguiente comando:
+</p>
+<pre>
+dev_appserver.py .
+</pre>
+<p>
+Con ello arrancará el servidor en local y si vemos las trazas podremos observar la URL donde se levanta el servicio con nuestro
+UID así como la URL de la consola administrativa GAE en local. La tarea es localizar y abrir ambas en el navegador y validar
+que funcionan. Hay varias direcciones que aparecen en los logs: leed bien para localizar las urls correctas.
+</p>
+<p>
+Importante: Una vez arrancada, en esta terminal es donde mostrarán todos los logs de la aplicación, ten en cuenta que son los logs 
+de la ejecución en <b>LOCAL</b>. Y si pulsamos CTRL+C se parará la ejecución y dejará de dar servicio.
+</p>
+
+</div>
+
+<div id="solution">
+<img src="images/exercise7.1.png">
+<p>
+Nos interesan las líneas "Starting module..." y "Starting admin server". La aplicación se levanta en el <a href="http://localhost:8080" target="_blank">puerto 8080</a> y la consola de administración en el <a href="http://localhost:8000" target="_blank">puerto 8000</a>.
+</p>
+</div>

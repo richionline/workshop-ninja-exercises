@@ -1,0 +1,24 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Terminal LOCAL</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>Despliegue</div>
+
+<p>
+Vamos que ya acabamos!!! Por último vuelve a desplegar la aplicación en la nube y valida que funciona correctamente. En esta ocasión
+vamos a ver como revisar logs en la nube, para ello accedemos a la consola (https://console.cloud.google.com) y buscamos el apartado
+<b>Logging / Logs Viewer</b>. Si observais el primer combo intentad localizar en él vuestro servicio, que recordar
+se corresponde con vuestro UID. Seleccionándolo podremos ver los logs que genera nuestra versión.
+
+</div>
+
+<div id="solution">
+<pre>
+gcloud app deploy
+</pre>
+<p>
+Si quisiéramos desplegar de nuevo los índices definidos en index.yaml deberíamos ejecutar tambien lo siguiente:
+</p>
+<pre>
+gcloud app deploy index.yaml
+</pre>
+
+</div>

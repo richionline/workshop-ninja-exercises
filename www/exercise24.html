@@ -1,0 +1,32 @@
+<div id="content">
+<div><b>RESUMEN DEL BLOQUE</b></div>
+<p>
+<ul>
+    <li>Hemos revisado el fichero <b>index.yaml</b> que es donde tenemos definidos los indices compuestos que son necesarios. 
+    Recordar que es importante definir índices en el modelo de las aplicaciones GAE, ya que DataStore no devolverá resultados 
+    en aquellas consultas en que se utilicen campos que no hayan sido indexados previamente, bien como índices simples o 
+    como índices compuestos</li>
+    <li>Dentro de la consola Google LOCAL hemos localizado donde se encuentran definidos los indices compuestos, en concreto
+        en la opción Datastore Indexes.
+    </li>
+    <li>Hemos aprendido como introducir trazas de log con la librería <b>logging</b> y sus diferentes métodos
+        <b>debug(), info(), warning(), error() y critical()</b></li>
+    <pre>logging.info('Estoy dentro')
+logging.info('Mensaje: ' + format(ninja_data))
+logging.info('Mensaje: %s', ninja_data) -> Con %s indicamos que se muestra un string y lo coja del siguiente parametro (ninja_data),
+                                           no hace falta formatearlo como en ejemplo anterior ya que lo hace automáticamente</pre>
+    <li>Por último hemos aprendido a instanciar un objeto, en concreto de la clase Ninja, y hemos comprobado como se le pueden 
+        asignar valores, en concreto en nuestro ejemplo le hemos asignado un valor de los recogidos del formulario.
+    </li>
+    <pre>ninja = model.Ninja()
+ninja.building = data['building']</pre>
+
+</ul>
+
+</p>
+
+</div>
+
+<div id="solution">
+<p>Bieeeeeen, vas bieeeeeen pero no estaría mal si nos fueramos antes de las 21:00h...en fin</p>
+</div>

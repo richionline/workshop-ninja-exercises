@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Ninja GAE!! - Ejercicios</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script>
+$(document).ready(function(){
+   function load(i) {
+     $('#content').load("exercise" + document.vars.i + ".html #content", function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success") {
+          $('#title').text("Hello Ninja GAE - Ejercicio " + document.vars.i);
+          if (document.blocks.indexOf(document.vars.i) != -1) 
+            $('#title').text($('#title').text() + " - Repaso conceptos");
+          $('#solution').empty();
+          window.location.hash = i;
+        }
+        if(statusTxt == "error") {
+          window.location.hash = "1";
+          location.reload();
+        }
+     });
+   }
+   document.vars = { i: 1, exercises: 42 };
+   document.blocks = [6, 12, 18, 24, 30, 36, 41]
+   var hash = window.location.hash;
+   if (hash != "" && hash.length > 1) {
+     var ex = Number(hash.substring(1));
+     if (!isNaN(ex)) {
+       document.vars.i = ex;
+     }
+   }
+   load(document.vars.i);
+   $('#show').click(function() {
+     $('#solution').load("exercise" + document.vars.i + ".html #solution");
+   });
+   $('#next').click(function() {
+     if (document.vars.i < document.vars.exercises) {
+       document.vars.i += 1
+       load(document.vars.i);
+     }
+   });
+   $('#previous').click(function() {
+     if (document.vars.i > 1) {
+       document.vars.i -= 1
+       load(document.vars.i);
+    }
+   });
+});
+</script>
+<style>
+body {
+  margin: 10px;
+  background-position-x: 45%;
+  background-position-y: 50px;
+  background-size: auto;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #4e8072;
+  color: white;
+  font-size: 13pt;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+pre {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  margin: 10px 0px 10px 0px;
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  font-size: large;
+}
+b {
+  color: yellow;
+  font-weight: 800;
+}
+.button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+button {
+  font-weight: 800 !important;
+}
+.content, .solution, #title, .button {
+  margin: 30px
+}
+.titulo {
+  color: yellow;
+  font-weight: 800;
+  margin-right: 10px;
+  margin-bottom: 10px
+}
+.important {
+  color: black
+}
+a {
+  color: yellow;
+  text-decoration: underline;
+  font-weight: 800;
+}
+#content > img, #solution > img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  max-height: 500px;
+  display: block;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<div class="navbar navbar-default">
+  <img src="https://www.theninjaproject.bbva/assets/vectors/ninja/logo.svg"
+        style="height: 58px; width: 160px" alt="Logo" class="default-logo">
+</div>
+
+<div class="button">
+    <button id="next" class="btn btn-success">Siguiente &gt;</button>
+    <button id="previous" class="btn btn-success">&lt; Anterior</button>
+</div>
+<h1 id="title">Hello Ninja GAE - Ejercicio</h1>
+<div id="content" class="content"></div>
+<div class="button">
+  <button id="show" class="btn btn-danger">Mostrar soluci&oacute;n</button>
+</div>
+<div id="solution" class="solution"></div>
+
+</body>
+</html>

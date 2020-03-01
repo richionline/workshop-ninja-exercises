@@ -1,0 +1,28 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+Para finalizar con los métodos de la clase Ninjas pasamos al metodo <b>delete</b>, como su nombre indica es el método en el que
+borraremos un determinado ninja a partir del ninja_id que nos llega.
+</p>
+<p>Para borrar una entidad del Data Store lo tenemos
+que hacer mediante la clave (key) del ninja y aplicando el metodo <b>delete()</b>, por ejemplo <i>entidad.key.delete()</i>.
+</p>
+<p>
+Como tarea lo que tenemos que hacer es completar el método. Para ello primero debemos localizar el ninja a borrar y
+asignarlo a un objeto y luego debemos borrarlo, esta última parte se hará dentro de la sentecia else:.
+</p>
+</div>
+
+<div id="solution">
+
+<pre>
+ninja = model.Ninja.get_by_id(int(ninja_id))
+if ninja is None:
+  send(self, 404)
+else:
+  ninja.key.delete()
+  send(self, 204)
+</pre>
+</div>

@@ -1,0 +1,35 @@
+<div id="content">
+<div><b>RESUMEN DEL BLOQUE</b></div>
+<p>
+<ul>
+    <li>Hemos revisado el fichero Python <b>./src/storage_handler.py</b> que es el que va a contener los métodos para manejar los ficheros 
+    e interactuar con <b>Google Cloud Storage</b>. Para ellos hemos usado la librería <b>google.cloud.storage</b></li>
+<pre>
+client = _get_storage_client()      # A partir de nuestro id del proyecto dev-bbva-gae-cicd obtiene el cliente
+bucket = client.bucket(bucket_name) # Instancia un objeto bucket a partir del nombre de nuestro bucket
+blob = bucket.blob(filename)        # Instancia objeto blob a partir del nombre del fichero que queremos subir, leer o borrar  
+blob.upload_from_string(fichero)    # Guardar un fichero
+blob.download_as_string()           # Leer un fichero
+blob.delete()                       # Borrar un fichero          
+</pre>
+
+    <li>Hemos accedido a la consola Google Cloud en la NUBE para validar donde se guardan los ficheros.</li>
+    <pre>Storage / Browser</pre>
+
+    <li>Hemos vuelto al fichero <b>main.py</b> para repasar los servicios que hemos establecido y probar los metodos GET.</li>
+    <pre>
+localhost:8080/ninjas
+localhost:8080/ninjas/&lt;id&gt; # Sustituye id por un identificador devuelto en la llamada anterior
+localhost:8080/moocs
+localhost:8080/moocs/&lt;id&gt;  # Sustituye id por un identificador devuelto en la llamada anterior
+localhost:8080/ranking
+localhost:8080/ranking/&lt;id_ninja&gt; # Sustituye id_ninja por un identificador devuelto en la primera llamada
+</pre>
+
+</ul>
+</p>
+
+</div>
+<div id="solution">
+<p>Vamos un último empujón!!!!!! y deja de pulsar el botón de solución que no has dejado ni un ejercicio sin mirar!!!!</p>
+</div>

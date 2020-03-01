@@ -1,0 +1,32 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/model.py</div>
+
+<p>
+En este fichero Python tenemos la definición de las entidades (tablas) de Data Store que vamos a usar, cada una correspondiente a una clase con sus respectivos atributos (columnas).
+</p>
+<p>
+Para ello usamos la librería <a href="https://cloud.google.com/appengine/docs/standard/python/ndb/?hl=es-419" target="_blank"><b>NDB</b></a>, que está referenciada en un import al principio del fichero. Esta librería permite que las aplicaciones Python en App Engine se conecten a <b>Cloud Data Store</b> de manera muy sencilla.</p>
+<p>
+Si observamos el fichero vemos que tenemos dos entidades definidas, junto con todos sus campos así como el tipo de cada campo.
+Revisa estas definiciones y detecta qué campos son índices. Aparte de revisar lo comentado incorpora como índices los siguientes campos para ello 
+tendrás que marcar como <b>True</b> su priopiedad <b>indexed</b>:
+</p>
+<ul>
+<li>En clase <b>Ninja</b> incorpora como índices los campos name y department</li>
+<li>En clase <b>Mooc</b> incorpora com índice el campo date</li>
+</ul>
+
+</div>
+
+<div id="solution">
+<pre>
+...
+    name = ndb.StringProperty(required=True, <label class="important">indexed=True</label>)
+    department = ndb.StringProperty(required=True, <label class="important">indexed=True</label>)
+...
+    date = ndb.DateTimeProperty(auto_now=True, <label class="important">indexed=True</label>)
+
+</pre>
+
+</div>

@@ -1,0 +1,28 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+Ahora que hemos detectado el método <b>save_ninja</b>, si os fijáis después de asignar los campos del formulario realiza una serie de
+operaciones con la imagen seleccionada. Esta parte es algo compleja y no es el objeto de este taller pero os invitamos a que la
+reviséis para ver cómo manejar las imágenes como un dato más en un API REST. Lo que sí veremos más adelante es cómo se almacenan las imágenes en Cloud Storage.
+</p>
+<p>
+Lo siguiente que hace es ejecutar el metodo <b>put()</b> sobre la entidad <b>ninja</b>.
+Este método es el que guarda los datos de la entidad en Data Store. Vamos a utilizar la aplicación para dar de alta un par
+de Ninjas y tratar de observar en el log que aparece la traza que indica que se ha guardado correctamente el ninja.
+</p>
+</div>
+
+<div id="solution">
+<p>
+La línea que escribe en los logs la traza indicando que se ha almacenado el ninja es la siguiente:
+</p>
+<pre>
+logging.info('WNP: Ninja %s almacenado correctamente en namespace %s', ninja.email, namespace_handler.get_name_ns())
+</pre>
+<p>
+Por lo que en nuestro terminal debería aparecer una traza parecida a la siguiente:
+</p>
+<pre>INFO     yyyy-mm-dd hh:mm:ss ninjas.py:XX] WNP: Ninja XXXXXXXXXX almacenado correctamente en namespace XXXXXXX</pre>
+</div>

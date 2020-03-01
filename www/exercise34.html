@@ -1,0 +1,16 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/moocs.py</div>
+<p>
+Ahora pasamos al metodo <b>retrive</b>, que lo que hace es recuperar los datos de un determinado mooc que le llega como parámetro.
+La tarea de este ejercicio es recuperar los datos de ese mooc realizando consulta sobre <b>model.Mooc</b>. Si tienes problemas
+fíjate en lo que hiciste en <b>ninjas.py</b> y recuerda que el método <b>get_by_id</b> necesita que lo que se pase como parámetro sea un
+<b>entero</b>.
+</p>
+</div>
+
+<div id="solution">
+<pre>
+mooc = model.Mooc.get_by_id(int(mooc_id))
+</pre>
+</div>

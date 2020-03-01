@@ -1,0 +1,25 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/config.py</div>
+
+<p>
+En este mismo fichero vamos a definir de la misma manera la constante con el nombre del bucket de Cloud Storage.
+</p>
+<p>
+Recordar que el bucket es la "carpeta" donde se depositaran los ficheros (imágenes, documentos, etc.)
+usados por la aplicación. Este nombre de bucket coincide con el que hemos creado en una tarea anterior y debería llamarse como el servicio,
+es decir, nuestro UID.
+</p>
+<p>
+Crear una variable llamada <b>CLOUD_STORAGE_BUCKET</b> donde al igual que hicimos con la variable <b>NAME_SPACE</b> asignemos el valor
+del servicio definido. Tener en cuenta que tambien podriamos asignar directamente el nombre pero de esta manera lo dejamos parametrizado ya
+que coincide con el nombre del servicio.
+</p>
+</div>
+
+<div id="solution">
+<pre>
+CLOUD_STORAGE_BUCKET = modules.get_current_module_name()
+</pre>
+
+</div>

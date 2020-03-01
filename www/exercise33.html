@@ -1,0 +1,36 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/moocs.py</div>
+
+<p>
+En este fichero se encuentra la clase y los métodos necesarios para interactuar con la entidad <b>model.Mooc</b>, es decir,
+la que va a gestionar los moocs que se den de alta para cada ninja.
+</p>
+<p>
+Tiene los mismos métodos que la clase Ninjas excepto update ya que los moocs no se pueden modificar.
+</p>
+<p>
+Es decir, contiene:
+</p>
+<ul>
+<li>el método <b>list</b> para obtener los moocs</li>
+<li>el método <b>retrieve</b> para obtener los datos de un mooc</li>
+<li>el método <b>create</b> para crear un mooc</li>
+<li> y el método <b>delete</b> para eliminar un mooc.</li>
+</ul>
+<p> Para empezar vamos a intentar
+realizar el metodo <b>list</b> entero, no te preocupes porque es muy parecido al metodo list del fichero <b>ninjas.py</b>.
+Lo único es que debes tener en cuenta que aquí debes obtener el ID del ninja y con ese dato listar los moocs
+que le pertenecen, por tanto deberías hacer consultas sobre model.Mooc.
+</p>
+</div>
+
+<div id="solution">
+<pre>
+ninja_id = self.request.get('ninja_id', default_value=None)
+if ninja_id is None:
+    moocs = model.Mooc.query().order(model.Mooc.date).fetch()
+else:
+    moocs = model.Mooc.query(model.Mooc.ninja_id == int(ninja_id)).order(model.Mooc.date).fetch()
+</pre>
+</div>

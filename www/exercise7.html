@@ -1,0 +1,30 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>app.yaml</div>
+
+<p>
+Antes de empezar a editar ficheros, vamos a abrir el editor Atom y en el menu <b>File</b> nos parecerá la opción 
+<b>Add Project Folder</b>, lo que vamos a hacer es seleccionar la carpeta del proyecto (worshop-ninja-python) y 
+con ello nos aparecerá cargada la estructura del mismo en la parte derecha, asi será más facil manejarnos.
+</p>
+<p>
+El fichero <a href="https://cloud.google.com/appengine/docs/standard/python/config/appref"  target="_blank">app.yaml</a> se encuentra en la raiz del proyecto y contiene parámetros
+de configuración de la aplicación:
+</p>
+<ul>
+  <li>Runtime utilizado, en este caso Python</li>
+  <li>Librerías adicionales necesarias (Google incluye <a href="https://cloud.google.com/appengine/docs/standard/python/tools/built-in-libraries-27"  target="_blank">una serie de librerías por defecto</a> que no es necesario incluir)</li>
+  <li>Rutas que definen las URLs de la aplicación, y cómo se deben tratar</li>
+</ul>
+<p>
+En este caso y como primera tarea debemos modificar el
+parámetro <b>service</b> incluyendo nuestro UID, con ello se levantará un servicio con nuestro identificador donde se ejecutará la aplicación. Al utilizar cada uno su identificador, se podrán desplegar en la aplicación los servicios de manera independiente. Una vez modificado guardar el fichero.
+</p>
+<p>Importante: el uid debe estar siempre en minúsculas.
+</p>
+</div>
+
+<div id="solution">
+<p>Por ejemplo:</p>
+<img src="images/exercise6.1.png">
+</div>

@@ -1,0 +1,27 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>appengine_config.py</div>
+
+<p>
+El archivo <b>appengine_config.py</b> se usa para poder personalizar los módulos y APIs de Python en Google App Engine. Debe estar en el raíz de nuestro proyecto. Con ello
+podemos anular (sobreescribir) constantes y funciones existentes en estos módulos. Para anular una constante o función, define la función o
+constante con el nombre del módulo, un guión bajo y el nombre de la constante o función a anular.
+</p>
+<p>En este caso vamos a anular la función <b>default_namespace_for_request</b> del modulo <b>namespace_manager</b>
+   para que devuelva como namespace el que hemos definido en nuestro fichero config.py.
+   Con esto conseguimos que cuando nuestro servicio reciba una petición HTTP, utilice el espacio de nombres correspondiente al nombre del mismo.
+</p>
+<p>
+Modificar el método <b>namespace_manager_default_namespace_for_request()</b> para que devuelva la constante definida en <b>config.py</b>, para ello usar el
+comando <b>return <i>valor</i></b>. Como pista, para referenciar una variable Python de otro fichero podemos hacerlo de la forma "fichero.variable".
+</p>
+
+</div>
+
+<div id="solution">
+<pre>
+def namespace_manager_default_namespace_for_request():
+    return config.NAME_SPACE
+</pre>
+
+</div>

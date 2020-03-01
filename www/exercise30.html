@@ -1,0 +1,31 @@
+<div id="content">
+<div><b>RESUMEN DEL BLOQUE</b></div>
+<p>
+<ul>
+    <li>Hemos aprendido a guardar en DataStore mediante el comando <b>put()</b></li>
+    <pre>ninja.put()</pre>
+    <li>En nuestro terminal local hemos aprendido a localizar trazas</li>
+    <pre>INFO     yyyy-mm-dd hh:mm:ss ninjas.py:XX] WNP: Ninja XXXXXXXXXX almacenado correctamente en namespace XXXXXXX</pre>
+    <li>Dentro de la consola Google LOCAL hemos localizado donde se encuentran los datos almacenados. En el menú pulsamos Datastore Viewer
+        y una vez dentro inidcamos el nombre de nuestro namespace.
+    </li>
+    <li>Hemos aprendido como usar el método <b>query()</b> para realizar consultas sobre nuestras entidades</li>
+    <pre>
+    Ninja.query()
+    Ninja.query().fetch(10)
+    Ninja.query(Ninja.department == filter).order(-Ninja.date)
+    Ninja.get_by_id(int(ninja_ID))
+    Ninja.query().order(-Ninja.date).fetch(10)</pre>
+    <li>Y por último hemos aprendido como a partir de un determinado ID podemos realizar una búsqeuda en nuestras entidades mediante el método
+        <b>get_by_id(ID)</b> teniendo en cuenta que requiere un entero.
+    </li>
+    <pre>ninja = model.Ninja.get_by_id(int(ninja_id))</pre>
+
+</ul>
+</p>
+
+</div>
+
+<div id="solution">
+<p>Es la hora de la pulga de jamon!!!, puedes levantarte a tomarte una pero recuerda volver que quedan ejercicios por hacer...</p>
+</div>

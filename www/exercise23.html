@@ -1,0 +1,27 @@
+<div id="content">
+<div><label class="titulo">Herramienta trabajo:</label>Editor</div>
+<div><label class="titulo">Funcionalidad / Fichero:</label>./src/ninjas.py</div>
+
+<p>
+Seguimos en el metodo <b>create</b>. Si observas tenemos una línea donde se instancia un objeto de la clase Ninja de model.py:
+</p>
+<pre>ninja = model.Ninja()</pre>
+<p>
+En este objeto instanciado que tiene las mismas propiedades que la clase <b>model.Ninja</b> es donde vamos a guardar la información de
+los campos recogida del formulario.
+</p>
+<p>Revisa el método e intenta modificarlo para que se guarde también el edificio <b>(building)</b> del Ninja ya
+que actualmente no lo está guardando. Como pista piensa que el metodo descrito <b>puede llamar a otros métodos</b>.
+</p>
+
+</div>
+
+<div id="solution">
+<p>
+El método create llama al metodo <b>save_ninja</b>, en este último debemos incluir la línea al principio cuando asigna los distintos valores:
+</p>
+<pre>
+ninja.building = data['building']
+</pre>
+
+</div>
